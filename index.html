@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Frontend Mentor | Chat App Illustration</title>
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            rubik: ['Rubik', 'sans-serif'],
+                        },
+                        colors: {
+                            // prim
+                            'pale-violet': 'hsl(276, 100%, 81%)',
+                            'moderate-violet': 'hsl(276, 55%, 52%)',
+                            'desaturated-dark-violet': 'hsl(271, 15%, 43%)',
+                            'grayish-blue': 'hsl(206, 6%, 79%)',
+                            'very-dark-desaturated-violet':
+                                'hsl(271, 36%, 24%)',
+                            'dark-grayish-violet': 'hsl(270, 7%, 64%)',
+                            'chat-left-bg': 'hsl(272, 41%, 93%)',
+
+                            // second
+                            white: 'hsl(0, 0%, 100%)',
+                            'light-grayish-violet': 'hsl(270, 20%, 96%)',
+                            'very-light-magenta': 'hsl(289, 100%, 72%)',
+
+                            // grad
+                            'light-magenta': 'hsl(293, 100%, 63%)',
+                            'light-violet': 'hsl(264, 100%, 61%)',
+                        },
+                    },
+                },
+            }
+        </script>
+    </head>
+    <body>
+        <main
+            class="grid lg:grid-cols-2 min-h-screen place-content-center items-center font-rubik"
+        >
+            <div
+                class="lg:absolute fixed top-0 -left-20 bg-gradient-to-tr to-light-magenta from-light-violet lg:w-[500px] lg:h-[90%] w-2/3 h-2/3 rounded-b-full z-0"
+            ></div>
+
+            <div
+                class="lg:absolute fixed bottom-0 -right-20 bg-[#f9f4fa] lg:w-[500px] lg:h-[90%] w-2/3 h-2/3 rounded-t-full z-0"
+            ></div>
+            <div
+                class="relative place-self-center bg-white rounded-[2rem] w-[350px] p-3 shadow-lg mt-20 mb-10 lg:my-0"
+            >
+                <div
+                    class="flex items-center bg-gradient-to-r to-light-magenta from-light-violet rounded-t-3xl rounded-b px-4 pb-3 pt-10 relative"
+                >
+                    <div
+                        class="absolute bg-white transform -translate-x-1/2 top-0 left-1/2 w-3/5 h-6 rounded-b-2xl"
+                    ></div>
+                    <img src="./images/arrow.svg" alt="Back" class="w-5 h-5" />
+                    <div class="rounded-full bg-white p-[1px] mr-4">
+                        <img
+                            src="./images/avatar.jpg"
+                            alt="Avatar"
+                            class="w-9 h-9 rounded-full"
+                        />
+                    </div>
+                    <div class="mr-auto">
+                        <p class="font-medium text-white">Samuel Green</p>
+                        <p class="text-pale-violet text-xs">
+                            Available to Walk
+                        </p>
+                    </div>
+                    <img
+                        src="./images/dots.svg"
+                        alt="More Items"
+                        class="w-6 h-6"
+                    />
+                </div>
+                <div
+                    class="bg-light-grayish-violet rounded-b-3xl p-3 flex flex-col gap-3"
+                >
+                    <div
+                        class="text-moderate-violet bg-chat-left-bg w-2/3 p-3 rounded-t-2xl rounded-br-2xl rounded-bl text-xs"
+                    >
+                        That sounds great. I'd be happy with that.
+                    </div>
+
+                    <div
+                        class="text-moderate-violet bg-chat-left-bg w-2/3 p-3 rounded-t-2xl rounded-br-2xl rounded-bl text-xs"
+                    >
+                        Could you send over some pictures of your dog, please?
+                    </div>
+
+                    <div class="flex gap-3 justify-end mt-3">
+                        <img
+                            src="./images/dog-image-1.jpg"
+                            alt="Dog 1"
+                            class="w-14 rounded-xl"
+                        />
+                        <img
+                            src="./images/dog-image-2.jpg"
+                            alt="Dog 2"
+                            class="w-14 rounded-xl"
+                        />
+                        <img
+                            src="./images/dog-image-3.jpg"
+                            alt="Dog 3"
+                            class="w-14 rounded-xl"
+                        />
+                    </div>
+
+                    <div
+                        class="text-desaturated-dark-violet bg-white w-[65%] p-3 rounded-t-2xl rounded-bl-2xl rounded-br text-xs ml-auto"
+                    >
+                        Here are a few pictures. She's a happy girl!
+                    </div>
+
+                    <div
+                        class="text-desaturated-dark-violet bg-white p-3 rounded-t-2xl rounded-bl-2xl rounded-br text-xs ml-auto mb-3"
+                    >
+                        Can you make it?
+                    </div>
+
+                    <div
+                        class="text-moderate-violet bg-chat-left-bg w-2/3 p-3 rounded-t-2xl rounded-br-2xl rounded-bl text-xs"
+                    >
+                        She looks so happy! The time we discussed works. How
+                        long shall I take her out for?
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-r from-light-magenta to-light-violet rounded-xl p-2 w-4/5 flex justify-between pr-6"
+                    >
+                        <div class="flex items-center">
+                            <div
+                                class="border border-very-light-magenta w-4 h-4 rounded-full mr-3"
+                            ></div>
+                            <p class="text-white text-xs">30 minute walk</p>
+                        </div>
+                        <span class="text-white font-bold"> $29 </span>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-r from-light-magenta to-light-violet rounded-xl p-2 w-4/5 flex justify-between pr-6"
+                    >
+                        <div class="flex items-center">
+                            <div
+                                class="border border-very-light-magenta w-4 h-4 rounded-full mr-3"
+                            ></div>
+                            <p class="text-white text-xs">1 hour walk</p>
+                        </div>
+                        <span class="text-white font-bold"> $49 </span>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-full p-2 flex justify-between items-center"
+                    >
+                        <p class="text-grayish-blue text-xs ml-5">
+                            Type a message…
+                        </p>
+                        <div
+                            class="bg-very-dark-desaturated-violet rounded-full text-white text-2xl font-bold text-center px-3 py-1"
+                        >
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative lg:text-start text-center px-10 pb-10">
+                <h1
+                    class="text-very-dark-desaturated-violet font-bold text-4xl my-8"
+                >
+                    Simple booking
+                </h1>
+
+                <p class="text-dark-grayish-violet xl:w-1/2 lg:w-2/3">
+                    Stay in touch with our dog walkers through the chat
+                    interface. This makes it easy to discuss arrangements and
+                    make bookings. Once the walk has been completed you can rate
+                    your walker and book again all through the chat.
+                </p>
+            </div>
+        </main>
+    </body>
+</html>
